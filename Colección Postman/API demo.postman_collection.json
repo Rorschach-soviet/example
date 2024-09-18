@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "9baf78bd-e5e0-4a5a-88e6-327dde3c8050",
+		"name": "API demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34771855"
+	},
+	"item": [
+		{
+			"name": "sign-up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"John Wick\",\r\n\"email\": \"wickjohn@gmail.com\",\r\n\"password\": \"Fsldkfjsjd01\",\r\n\"phones\": [\r\n{\r\n\"number\": 1234567,\r\n\"citycode\": 54,\r\n\"contrycode\": \"US\"\r\n}\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/sign-up",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGc2xka2Zqc2pkMDEiLCJleHAiOjE3MjY2NTI3Njl9.sA5z3muuwQSa-yIJoTzgtm-HfEiwu-Vox9p6oOA_iw0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
